@@ -6,7 +6,7 @@
 
 - Name: Deidesheimer Kerwebuwe (pfälzisch „Kerwebuwe“ = Kirchweih-Burschen; Einzahl „Bu“)
 - Gegründet: 1972 in Deidesheim (67146), Pfalz
-- Mitglieder: 75 Buwe seit 1972, davon 10 aktiv (Stand November 2026); erster Bu: Willi Leim
+- Mitglieder: 77 Buwe seit 1972, davon 12 aktiv (Stand November 2026); erster Bu: Willi Leim
 - Aufnahme: Jeder Aspirant läuft ein Jahr in der Küferbluse mit, bevor er fest aufgenommen wird.
 - Kontakt: deidesheimerkerwebuwe@gmx.de
 - Instagram: https://instagram.com/deidesheimer_kerwebuwe
