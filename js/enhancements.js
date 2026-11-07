@@ -67,7 +67,12 @@
         var rows=[].slice.call(chron.querySelectorAll('.brow'));
         rows.forEach(function(r){ var m=(r.querySelector('.bnr')||{}).textContent||'0'; r.__nr=parseInt(m,10)||0; r.__akt=r.classList.contains('ba'); });
         var ctl=document.createElement('div'); ctl.className='chron-ctl';
-        ctl.innerHTML='<div class="cc-seg"><button data-f="all" class="on">Alle</button><button data-f="akt">Aktive</button><button data-f="ehe">Ehemalige</button></div><button class="cc-sort" data-s="asc">Älteste zuerst ↑</button>';
+        var nAkt=rows.filter(function(r){return r.__akt;}).length;
+        ctl.innerHTML='<div class="cc-seg" role="group" aria-label="Buwe filtern">'
+          +'<button data-f="all" class="on" aria-pressed="true">Alle <span class="cc-n">'+rows.length+'</span></button>'
+          +'<button data-f="akt" aria-pressed="false"><i class="cc-dot akt"></i>Aktive <span class="cc-n">'+nAkt+'</span></button>'
+          +'<button data-f="ehe" aria-pressed="false"><i class="cc-dot"></i>Ehemalige <span class="cc-n">'+(rows.length-nAkt)+'</span></button>'
+          +'</div><button class="cc-sort" data-s="asc" aria-label="Sortierung umkehren">Älteste zuerst <span class="cc-arr">↑</span></button>';
         chron.parentNode.insertBefore(ctl, chron);
         var filt='all', sort='asc';
         function apply(){
@@ -78,8 +83,8 @@
         }
         ctl.addEventListener('click', function(e){
           var b=e.target.closest('button'); if(!b) return;
-          if(b.dataset.f){ filt=b.dataset.f; ctl.querySelectorAll('.cc-seg button').forEach(function(x){x.classList.toggle('on',x===b);}); }
-          if(b.dataset.s){ sort = sort==='asc'?'desc':'asc'; b.textContent = sort==='asc'?'Älteste zuerst ↑':'Neueste zuerst ↓'; b.dataset.s=sort; }
+          if(b.dataset.f){ filt=b.dataset.f; ctl.querySelectorAll('.cc-seg button').forEach(function(x){x.classList.toggle('on',x===b);x.setAttribute('aria-pressed',x===b);}); }
+          if(b.dataset.s){ sort = sort==='asc'?'desc':'asc'; b.innerHTML = sort==='asc'?'Älteste zuerst <span class="cc-arr">↑</span>':'Neueste zuerst <span class="cc-arr">↓</span>'; b.dataset.s=sort; }
           apply();
         });
       }

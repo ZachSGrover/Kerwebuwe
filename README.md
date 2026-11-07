@@ -14,7 +14,21 @@ js/enhancements.js         Instagram-Icon, PDF-Vorschau, Chronik-Filter, Scroll-
 js/reden.js                Texte der Kerwereden + Verweise auf die PDFs
 assets/img/                Bilder (Logo, Hero, Galerie, Hintergründe)
 assets/kerwereden/         Original-Kerwereden als PDF (kerwerede-JAHR.pdf)
+kerwereden/                Kerwereden als eigene Textseiten (generiert, nicht von Hand bearbeiten)
+css/rede.css               Design der Kerwereden-Seiten
+robots.txt, sitemap.xml    für Suchmaschinen
+llms.txt                   Kurzfassung der Website für KI-Assistenten (generiert)
+tools/build_seo.py         erzeugt kerwereden/, sitemap.xml und llms.txt
+tools/llms-template.md     Vorlage für llms.txt (Fakten hier pflegen)
 ```
+
+## Auffindbarkeit für Google & KI
+
+- Hauptüberschrift, Bildbeschreibungen, strukturierte Daten (schema.org) und Vorschau-Tags für Social Media sind in `index.html` hinterlegt.
+- Jede Kerwerede hat eine eigene Textseite unter `kerwereden/JAHR.html`, die auch ohne JavaScript lesbar ist.
+- Nach Änderungen an `js/reden.js` oder `tools/llms-template.md`: `python3 tools/build_seo.py` ausführen.
+- Bei einer eigenen Domain die Adresse `https://zachsgrover.github.io/Kerwebuwe/` ersetzen in:
+  `tools/build_seo.py` (SITE), `index.html` (canonical, og:, JSON-LD) und `robots.txt` – danach das Skript ausführen.
 
 ## Ansehen
 
@@ -29,6 +43,7 @@ assets/kerwereden/         Original-Kerwereden als PDF (kerwerede-JAHR.pdf)
 1. PDF als `assets/kerwereden/kerwerede-JAHR.pdf` ablegen.
 2. In `js/reden.js` den Text unter `REDEN` und den Pfad unter `RPDF` ergänzen.
 3. In `index.html` beim Jahres-Button die Klasse `has` setzen.
+4. `python3 tools/build_seo.py` ausführen (erzeugt die Textseite und aktualisiert Sitemap und llms.txt).
 
 ## Arbeitsweise
 

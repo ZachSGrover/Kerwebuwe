@@ -1,0 +1,30 @@
+# Alle Suchmaschinen und KI-Assistenten dürfen die Website lesen.
+User-agent: *
+Allow: /
+
+# KI-Crawler ausdrücklich erlaubt
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://zachsgrover.github.io/Kerwebuwe/sitemap.xml

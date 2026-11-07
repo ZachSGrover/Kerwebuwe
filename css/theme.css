@@ -47,3 +47,45 @@ header .menu a{white-space:nowrap}
 #geschichte::after{content:"";position:absolute;top:50%;right:-70px;transform:translateY(-50%);width:520px;height:693px;background:url('../assets/img/geschichte-bg.svg') center/contain no-repeat;opacity:.07;pointer-events:none;z-index:0}
 @media(max-width:1080px){ #geschichte::after{right:-160px;opacity:.05} }
 @media(max-width:820px){ #geschichte::after{display:none} }
+
+/* ===== Chronik (Die Buwe) – überarbeitet ===== */
+.chron-ctl{gap:12px;margin:34px 0 8px}
+.chron-ctl .cc-seg,.chron-ctl .cc-sort{height:46px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);box-shadow:none}
+.chron-ctl .cc-seg{padding:4px;gap:2px}
+.chron-ctl button{display:inline-flex;align-items:center;gap:8px;height:100%;padding:0 18px;font-size:13px;color:#b9c6d8}
+.chron-ctl .cc-seg button:hover{color:#fff;background:rgba(255,255,255,.06)}
+.chron-ctl .cc-seg button.on,.chron-ctl .cc-seg button.on:hover{background:#E0B64E !important;color:#1a1205 !important}
+.chron-ctl .cc-n{font-weight:500;font-size:11.5px;letter-spacing:0;padding:2px 7px;border-radius:100px;background:rgba(255,255,255,.08);color:inherit;opacity:.85}
+.chron-ctl button.on .cc-n{background:rgba(26,18,5,.14);opacity:1}
+.chron-ctl .cc-dot{width:7px;height:7px;border-radius:50%;background:#7c8798;flex:0 0 auto}
+.chron-ctl .cc-dot.akt{background:#E0B64E}
+.chron-ctl button.on .cc-dot{background:#1a1205}
+.chron-ctl .cc-sort{padding:0 18px;font-size:12.5px;font-weight:600;color:#b9c6d8}
+.chron-ctl .cc-sort:hover{color:#fff;border-color:rgba(224,182,78,.55)}
+.chron-ctl .cc-arr{color:#E0B64E;font-size:14px}
+
+.brow .byear{color:#9fb6d4}
+.brow .bbadge{color:#7f93ad}
+.brow.ba .byear,.brow.ba .bbadge{color:#E0B64E}
+.brow.ba .bname::before{background:#E0B64E}
+.chron-note{text-align:center;margin-top:22px}
+
+@media(max-width:640px){
+  .chron-ctl{gap:10px;margin-top:28px}
+  .chron-ctl .cc-seg{width:100%;max-width:400px}
+  .chron-ctl .cc-seg button{flex:1;justify-content:center;padding:0 8px;gap:6px;font-size:12px}
+  .chron-ctl .cc-n{font-size:10.5px;padding:1px 6px}
+  .chron-ctl .cc-sort{height:40px;font-size:11.5px}
+  .brow{display:grid;grid-template-columns:30px 1fr auto;grid-template-areas:"nr name year" "nr name badge";column-gap:12px;row-gap:1px;padding:11px 14px}
+  .brow .bnr{grid-area:nr}
+  .brow .bname{grid-area:name;font-size:15px;line-height:1.3}
+  .brow .byear{grid-area:year;text-align:right}
+  .brow .bbadge{grid-area:badge;text-align:right}
+}
+
+/* Hero-Titel ist jetzt die Hauptüberschrift (h1) – Aussehen unverändert */
+h1.fk{font-weight:400;line-height:inherit}
+.rarch{margin-top:10px}
+.rarch a{color:#E0B64E;font-family:'Oswald',sans-serif;font-size:13px;letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid rgba(224,182,78,.4);padding-bottom:2px}
+.rarch a:hover{border-color:#E0B64E}
+.brow.ba .bnr{color:#c9d6e8}
