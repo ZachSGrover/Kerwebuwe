@@ -1,0 +1,49 @@
+body{background:#081627 !important;color:#d7e0ec}
+.tint,.white,.tint2{background:#0B2342 !important;color:#d7e0ec}
+.navy{background:linear-gradient(180deg,#0E2C54,#050e1c) !important}
+.stitle{color:#fff !important}
+.slead{color:#aab8cc !important}
+.eyebrow{color:#E0B64E !important}
+.eyebrow::after{background:#E0B64E !important}
+.hi .hc h4,.ji .jc h4{color:#fff !important}
+.hi .hc p,.ji .jc p,.about p{color:#aab8cc !important}
+.hy{color:#9fb6d6 !important}
+.kbox{background:#0E2C54 !important;border:1px solid #1e3a5c !important;border-top:2px solid #E0B64E !important}
+.kbox h3{color:#fff !important}.kbox p,.kbox .legal{color:#aab8cc !important}
+.brow{background:#0E2C54 !important;border-color:#1e3a5c !important;color:#eaf0f7}
+.brow .bname{color:#eaf0f7 !important}
+.brow.ba{background:#123a66 !important;box-shadow:inset 3px 0 0 #E0B64E !important}
+.ry{background:#0E2C54 !important;border-color:#1e3a5c !important;color:#9fb6d6 !important}
+.ry.has{background:#123a66 !important;color:#fff !important;border-color:#2a568c !important}
+.gc{border-color:#1e3a5c !important}
+.chron-ctl .cc-seg{background:rgba(255,255,255,.06)}
+.chron-ctl button{color:#aab8cc}
+.chron-ctl .cc-sort{background:#0E2C54;border-color:#1e3a5c;color:#aab8cc}
+.chron-ctl button.on{background:#E0B64E !important;color:#1a1205 !important}
+.mbox{background:#0E2C54 !important} .mbox #rb{color:#cdd8e6 !important} .mbox h3{color:#fff !important}
+footer{background:#050e1c !important}
+/* Nav als durchscheinendes Material (Apple-Stil) */
+header{background:rgba(11,35,66,.74) !important;backdrop-filter:blur(22px) saturate(160%) !important;-webkit-backdrop-filter:blur(22px) saturate(160%) !important}
+@media(prefers-reduced-transparency:reduce){header{background:rgba(11,35,66,.98) !important;backdrop-filter:none !important}}
+/* --- Abstaende ausbalanciert: Desktop-Fullsize & Mobile, weniger blauer Leerraum --- */
+section{padding:clamp(46px,5vw,76px) 0 !important}
+.about{align-items:start !important;gap:60px !important}
+.about .aimg{align-self:center !important}
+/* --- Nav: Vollbild komfortabel (Basis >1080px), mittlere Breiten kompakt in EINER Zeile.
+       Mobile-Burger kommt aus der Basis-CSS bei <=860px. --- */
+.ig-nav{width:40px;height:40px;border-radius:11px}
+header .menu a{white-space:nowrap}
+@media(min-width:861px) and (max-width:1160px){
+  header .menu{gap:14px !important}
+  header .menu a{font-size:13px !important;letter-spacing:.02em !important}
+  header .brand .n{font-size:18px !important}
+  .ig-nav{width:36px !important;height:36px !important;margin-left:6px !important}
+  .ig-nav svg{width:18px !important;height:18px !important}
+}
+
+/* Wappen-Wasserzeichen: fuellt den leeren blauen Raum rechts (Geschichte) */
+#geschichte{position:relative;overflow:hidden}
+#geschichte>.container{position:relative;z-index:1}
+#geschichte::after{content:"";position:absolute;top:50%;right:-70px;transform:translateY(-50%);width:520px;height:693px;background:url('../assets/img/geschichte-bg.svg') center/contain no-repeat;opacity:.07;pointer-events:none;z-index:0}
+@media(max-width:1080px){ #geschichte::after{right:-160px;opacity:.05} }
+@media(max-width:820px){ #geschichte::after{display:none} }
