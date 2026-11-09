@@ -5,7 +5,7 @@
   var PDFW=false;
   async function renderPDF(url, box){
     if(!window.pdfjsLib) return false;
-    if(!PDFW){ try{ pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js'; }catch(e){} PDFW=true; }
+    if(!PDFW){ try{ pdfjsLib.GlobalWorkerOptions.workerSrc='vendor/pdfjs/pdf.worker.min.js'; }catch(e){} PDFW=true; }
     box.innerHTML='<div class="pdf-load">Original wird geladen …</div>';
     try{
       var pdf=await pdfjsLib.getDocument({url:url}).promise;

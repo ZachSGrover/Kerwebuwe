@@ -21,10 +21,6 @@ import re
 SITE = "https://zachsgrover.github.io/Kerwebuwe/"
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-FONTS = ("https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700"
-         "&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,500;1,600"
-         "&family=Inter:wght@400;500;600;700&family=UnifrakturMaguntia&display=swap")
-
 
 def load_reden():
     src = open(os.path.join(ROOT, "js", "reden.js"), encoding="utf8").read()
@@ -83,7 +79,7 @@ def page(title, description, canonical, body, depth=1, extra_head=""):
 <meta property="og:url" content="{canonical}">
 <meta property="og:image" content="{SITE}assets/img/hero.jpg">
 <link rel="icon" href="{up}assets/img/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link href="{FONTS}" rel="stylesheet">
+<link rel="stylesheet" href="{up}css/fonts.css">
 <link rel="stylesheet" href="{up}css/rede.css">
 {extra_head}</head>
 <body>

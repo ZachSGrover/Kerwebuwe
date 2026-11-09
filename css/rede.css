@@ -25,3 +25,12 @@ h1{font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(32px,5vw
 .rtext .prosa{color:#c9d4e3}
 .rsep{border:0;height:1px;background:linear-gradient(90deg,transparent,#E0B64E,transparent);margin:2.4em auto;width:60%}
 .rh2{font-family:'Oswald',sans-serif;font-weight:600;font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:#E0B64E;margin:2.2em 0 .9em}
+
+/* Impressum & Datenschutz */
+.legalpage h2{font-family:'Oswald',sans-serif;font-weight:600;font-size:15px;letter-spacing:.12em;text-transform:uppercase;color:#E0B64E;margin:2.2em 0 .7em}
+.legalpage p{margin:0 0 1em;color:#d5deea}
+.legalpage a{color:#E0B64E;border-bottom:1px solid rgba(224,182,78,.35)}
+.legalpage a:hover{border-color:#E0B64E}
+.legalpage .rlead{margin-bottom:1em}
+.legalpage .todo{background:rgba(224,182,78,.18);color:#ffd87a;padding:0 4px;border-radius:3px}
+.legalpage .stand{margin-top:2.5em;font-size:14px;color:#7f93ad}

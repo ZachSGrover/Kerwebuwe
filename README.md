@@ -18,6 +18,10 @@ kerwereden/                Kerwereden als eigene Textseiten (generiert, nicht vo
 css/rede.css               Design der Kerwereden-Seiten
 robots.txt, sitemap.xml    für Suchmaschinen
 llms.txt                   Kurzfassung der Website für KI-Assistenten (generiert)
+impressum.html             Impressum – Name und Anschrift der verantwortlichen Person hier eintragen
+datenschutz.html           Datenschutzerklärung (Abschnitt 2 „Hosting“ bei Anbieterwechsel anpassen)
+css/fonts.css, assets/fonts/  Schriften lokal (keine Verbindung zu Google)
+vendor/pdfjs/              PDF-Anzeige (pdf.js 3.11.174, Apache 2.0) lokal
 tools/build_seo.py         erzeugt kerwereden/, sitemap.xml und llms.txt
 tools/llms-template.md     Vorlage für llms.txt (Fakten hier pflegen)
 ```
@@ -48,3 +52,9 @@ tools/llms-template.md     Vorlage für llms.txt (Fakten hier pflegen)
 ## Arbeitsweise
 
 `main` ist der stabile Stand. Verbesserungen werden in eigenen Branches entwickelt und per Pull Request in `main` übernommen.
+
+## Datenschutz & Recht
+
+- Die Website lädt nichts von fremden Servern (keine Google Fonts, kein CDN, keine Cookies, kein Tracking).
+- Vor der Veröffentlichung: in `impressum.html` die Platzhalter `[Vor- und Nachname]` und `[Straße und Hausnummer]` ersetzen.
+- Wird die Website woanders als bei GitHub Pages gehostet, Abschnitt 2 in `datenschutz.html` anpassen.
